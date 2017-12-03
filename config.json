@@ -1,0 +1,93 @@
+{
+    "bridge":
+    {
+	"name": "Homebridge",
+	"username": "CC:E1:D5:17:28:EF",
+	"port": 51826,
+	"pin": "031-45-154"
+    },
+
+    "accessories": [
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank 前進",
+	    "on_url"    : "http://localhost:8000/macros/tank/ON",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank stop",
+	    "on_url"    : "http://localhost:8000/macros/tank/stop",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank off",
+	    "on_url"    : "http://localhost:8000/macros/tank/OFF",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank left",
+	    "on_url"   : "http://localhost:8000/macros/tank/left",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank right",
+	    "on_url"   : "http://localhost:8000/macros/tank/right",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank 左旋回",
+	    "on_url"   : "http://localhost:8000/macros/tank/left",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank 右旋回",
+	    "on_url"   : "http://localhost:8000/macros/tank/right",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank 左急旋回",
+	    "on_url"   : "http://localhost:8000/macros/tank/qleft",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	},
+
+	{   "accessory" : "Http",
+	    "http_method": "POST",
+	    "service": "Switch",
+	    "status_url":  "http://localhost:8000/GPIO/17/value", "switchHandling": "yes",
+	    "name"      : "Tank 右急旋回",
+	    "on_url"   : "http://localhost:8000/macros/tank/qright",
+	    "off_url"   : "http://localhost:8000/macros/tank/OFF"
+	}
+
+    ]
+}
